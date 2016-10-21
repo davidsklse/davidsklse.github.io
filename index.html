@@ -285,7 +285,7 @@
     </script>
 </head>
 
-<body>
+<body class="trans">
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -394,8 +394,6 @@
 
 
     });
-    $('body').addClass('trans');
-
     function show_post(event) {
         var ele = $(event.target);
         var post_url = ele.attr('data-url');
