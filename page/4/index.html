@@ -133,10 +133,11 @@
 
         /* 主页中的日志列表 */
         #post-list {
-            width: 100%;
             position: absolute;
             padding: 20px;
-            margin-top: 50px;
+            left: 0px;
+            right: 0px;
+            margin: 50px auto 20px auto;
         }
 
         .post-brief {
@@ -152,6 +153,10 @@
             margin-left: 15px;
         }
 
+        /* 日志 */
+        .blog img {width: 100%; }
+        .img-remark {text-align: center;}
+
         /*弹出窗口*/
         @media screen and (max-width:768px) {
             #myModal .modal-dialog {
@@ -159,6 +164,10 @@
                 left: 0px;
                 right: 0px;
                 margin: auto;
+            }
+
+            #post-list {
+                width: 100%;
             }
         }
         @media screen and (min-width:769px){
@@ -169,7 +178,18 @@
                 right: 0px;
                 margin: auto;
             }
+
+            #post-list {
+                width: 80%;
+            }
         }
+
+        @media screen and (min-width:1000px){
+            #post-list {
+                width: 900px
+            }
+        }
+
         .modal-title {
             text-align: center;
         }
@@ -324,29 +344,27 @@
 <div id="post-list"><!-- 显示日志列表 -->
 
     <div class="post-brief">
+        <h3><strong>《百年孤独》的阅读方法</strong></h3>
+        <p>2016年9月5日</p>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test15/" data-title="《百年孤独》的阅读方法">阅读全文</div>
+    </div>
+
+    <div class="post-brief">
+        <h3><strong>《百年孤独》的阅读方法</strong></h3>
+        <p>2016年9月5日</p>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test14/" data-title="《百年孤独》的阅读方法">阅读全文</div>
+    </div>
+
+    <div class="post-brief">
         <h3><strong>黑暗童话</strong></h3>
         <p>2016年9月5日</p>
-        <p>其实很多童话是大人写来威慑小朋友的，所以多少带有噩梦的色彩。<br>而更多的童话本身其实是比较邪恶淫秽的真实逸事，就好像我们所说的开膛手Jack,但是经过几百年演变，就会改变其含义，变成我们后来所耳熟能详的童话故事。<br>参见凯瑟琳·奥兰丝汀《百变小红帽 (豆瓣)——一则童话三百年的演变》<br>比如小红帽的 故事，三百年前的小红帽是一个充满淫秽暴力和性暗示的法国童话，故事的结局小红帽被大野狼所吞噬。它的本意是告诫年轻的女孩子，小心男人的甜言蜜语，不要 被诱拐女性的男人所欺骗，大野狼其实就是色狼的隐喻，是诱拐年轻女孩的男子。小红帽的红色代表女子经血，也有处女的意思，是受训诫的纯洁女孩。<span>......</span>
+        <span>......</span>
         <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test13/" data-title="黑暗童话">阅读全文</div>
     </div>
 
-    <div class="post-brief">
-        <h3><strong>提高写作水平的十条建议</strong></h3>
-        <p>2016年9月5日</p>
-        <p>大学的许多老师和管理者都需要花费大量时间写作，但我们的写作水平往往差强人意。我怎么也搞不明白我们这个行当明明非常重视学术写作，为什么很少有人讲授如何写作呢？ 在大学工作的近30年中，我看到很多有才华的人因为不能写作或者没有写作而失败了。而有些能力平平的人（每天早上，我都能从镜子中看到这个人）就因为掌握了写作技能在学界混得还算不错。 这开始于研究生院。从那时起，你要从上课转变为写作，开始几乎正好相反的转型。许多研究生在前两年上课期间是人人都羡慕和高看的明星，但突然间他们发现自己不再是主角了。相反，那些不在乎通过认真阅读参考书目中的每一页书来讨好教授的不起眼的学生突然给刊物投稿而且发表了，实<span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test12/" data-title="提高写作水平的十条建议">阅读全文</div>
-    </div>
-
-    <div class="post-brief">
-        <h3><strong>必须先了解的16件事</strong></h3>
-        <p>2016年9月5日</p>
-        <p>月4日，鹿易吉•塞拉菲尼出生于罗马。1955年10月6日，他在打球时摔倒在玻璃上，割伤了手，从此之后，他决定开始画画。 </p>
-<p>2.在靠近佩达索山丘之间的一处别墅，塞拉菲尼度过了童年部分时光。这里距离利玛窦的出生地马切拉塔只有几公里。也是在这里，他阅读了不少关于中国的书籍。他在伯父的图书馆里翻到一本旧书，看到一幅鞑靼的食草羔羊图，“那一刻我灵光乍现，也许这件事就是我创作这部抄本的一个先兆。” </p>
-<p>3.27岁这一年，在上一堂以裸体半机械人为对象的写生课时，塞拉菲尼用彩色铅笔在一页纸上画过一幅画，画中的几具人体都有着钳子、自行车轱辘和自来水笔形的肢体。后来他发现，要完成这<span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test11/" data-title="必须先了解的16件事">阅读全文</div>
-    </div>
-
-    <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><a class="item" href="/page/2/#post-list">2</a><a class="item" href="/page/3/#post-list">3</a><span class="item active">4</span><a class="item" href="/page/5/#post-list">5</a><a class="item" href="/page/6/#post-list">6</a><a class="item" href="/page/7/#post-list">7</a></div></div>
+    <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><a class="item" href="/page/2/#post-list">2</a><a class="item" href="/page/3/#post-list">3</a><span class="item active">4</span><a class="item" href="/page/5/#post-list">5</a><a class="item" href="/page/6/#post-list">6</a><span class="item">&hellip;</span><a class="item" href="/page/8/#post-list">8</a></div></div>
     <div style="text-align: center">
         <hr>
         <p>© 2016 Weng Chunyi, Powered by Hexo.</p>
@@ -365,7 +383,7 @@
         $('body').removeClass('fade-cover');
     }
 
-    var html = '<a class="extend prev" rel="prev" href="/page/3/#post-list">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#post-list">2</a><a class="page-number" href="/page/3/#post-list">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#post-list">5</a><a class="page-number" href="/page/6/#post-list">6</a><a class="page-number" href="/page/7/#post-list">7</a><a class="extend next" rel="next" href="/page/5/#post-list">Next</a>';
+    var html = '<a class="extend prev" rel="prev" href="/page/3/#post-list">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#post-list">2</a><a class="page-number" href="/page/3/#post-list">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#post-list">5</a><a class="page-number" href="/page/6/#post-list">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#post-list">8</a><a class="extend next" rel="next" href="/page/5/#post-list">Next</a>';
     var d = $(html);
     for(var i=0; i<d.length; ++i){
         if($(d[i]).attr('href') == '/'){

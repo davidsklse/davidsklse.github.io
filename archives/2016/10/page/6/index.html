@@ -133,10 +133,11 @@
 
         /* 主页中的日志列表 */
         #post-list {
-            width: 100%;
             position: absolute;
             padding: 20px;
-            margin-top: 50px;
+            left: 0px;
+            right: 0px;
+            margin: 50px auto 20px auto;
         }
 
         .post-brief {
@@ -152,6 +153,10 @@
             margin-left: 15px;
         }
 
+        /* 日志 */
+        .blog img {width: 100%; }
+        .img-remark {text-align: center;}
+
         /*弹出窗口*/
         @media screen and (max-width:768px) {
             #myModal .modal-dialog {
@@ -159,6 +164,10 @@
                 left: 0px;
                 right: 0px;
                 margin: auto;
+            }
+
+            #post-list {
+                width: 100%;
             }
         }
         @media screen and (min-width:769px){
@@ -169,7 +178,18 @@
                 right: 0px;
                 margin: auto;
             }
+
+            #post-list {
+                width: 80%;
+            }
         }
+
+        @media screen and (min-width:1000px){
+            #post-list {
+                width: 900px
+            }
+        }
+
         .modal-title {
             text-align: center;
         }

@@ -133,10 +133,11 @@
 
         /* 主页中的日志列表 */
         #post-list {
-            width: 100%;
             position: absolute;
             padding: 20px;
-            margin-top: 50px;
+            left: 0px;
+            right: 0px;
+            margin: 50px auto 20px auto;
         }
 
         .post-brief {
@@ -152,6 +153,10 @@
             margin-left: 15px;
         }
 
+        /* 日志 */
+        .blog img {width: 100%; }
+        .img-remark {text-align: center;}
+
         /*弹出窗口*/
         @media screen and (max-width:768px) {
             #myModal .modal-dialog {
@@ -159,6 +164,10 @@
                 left: 0px;
                 right: 0px;
                 margin: auto;
+            }
+
+            #post-list {
+                width: 100%;
             }
         }
         @media screen and (min-width:769px){
@@ -169,7 +178,18 @@
                 right: 0px;
                 margin: auto;
             }
+
+            #post-list {
+                width: 80%;
+            }
         }
+
+        @media screen and (min-width:1000px){
+            #post-list {
+                width: 900px
+            }
+        }
+
         .modal-title {
             text-align: center;
         }
@@ -324,37 +344,27 @@
 <div id="post-list"><!-- 显示日志列表 -->
 
     <div class="post-brief">
+        <h3><strong>一分钟教你读懂《之江新语》</strong></h3>
+        <p>2016年9月5日</p>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test21/" data-title="一分钟教你读懂《之江新语》">阅读全文</div>
+    </div>
+
+    <div class="post-brief">
+        <h3><strong>《红楼梦》中林黛玉为何如此小气</strong></h3>
+        <p>2016年9月5日</p>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test17/" data-title="《红楼梦》中林黛玉为何如此小气">阅读全文</div>
+    </div>
+
+    <div class="post-brief">
         <h3><strong>霍乱与爱情的关系</strong></h3>
         <p>2016年9月5日</p>
-        <p>公正而论，如果让在世作家选择最喜欢的作家的话，我相信50%以上的作家都会毫不犹豫的说是马尔克斯，他确实是当世最伟大的作家。<br>    ——余华</p>
-<p>一、霍乱之于爱情</p>
-<p>相思病，也有着和霍乱相同的症状。迅速扩散，持久蔓延；不能治愈，只能自愈。你无法抵御它，除非相思，已经病入膏肓。</p>
-<pre><code>“实际上，霍乱并不管你是什么肤色和何种出身。同突然蔓延开来一样，霍乱又突然停止了，从来没弄清楚到底有多少人死于非命，这倒不是无法统计，而是因为我们最常见的美德之一，就是对自己的不幸逆来顺受。”
-</code></pre><p>这正是霍乱与爱情相似之处：无可幸<span>......</span>
+        <span>......</span>
         <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test16/" data-title="霍乱与爱情的关系">阅读全文</div>
     </div>
 
-    <div class="post-brief">
-        <h3><strong>《百年孤独》的阅读方法</strong></h3>
-        <p>2016年9月5日</p>
-        <p>20世纪备受推崇的小说，很多都是很难让人读下去的；相较之下，马尔克斯的作品，已经是比较业界良心了。您要是不信，可以去抓本《喧哗与骚动》来看看，也可以去抓本《万有引力之虹》来读读；读完之后，您就会发现，马尔克斯老先生，是多么随和亲民啊。</p>
-<p>但我们作为一般的读者，读起《百年孤独》来，还是会觉得比较艰涩难懂。如果要想能顺畅地完成阅读，我们必须先了解清楚，为什么这篇作品会构成阅读障碍。</p>
-<p>解决这个问题之前，咱们先来聊一下外国文学史吧。</p>
-<p>小说兴起的时候，文本的驱动力，是由情节提供的。我们看《鲁滨逊漂流记》，首先，是鲁滨逊这个人进入到我们的视野；然后我们了解他做<span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test15/" data-title="《百年孤独》的阅读方法">阅读全文</div>
-    </div>
-
-    <div class="post-brief">
-        <h3><strong>《百年孤独》的阅读方法</strong></h3>
-        <p>2016年9月5日</p>
-        <p>20世纪备受推崇的小说，很多都是很难让人读下去的；相较之下，马尔克斯的作品，已经是比较业界良心了。您要是不信，可以去抓本《喧哗与骚动》来看看，也可以去抓本《万有引力之虹》来读读；读完之后，您就会发现，马尔克斯老先生，是多么随和亲民啊。</p>
-<p>但我们作为一般的读者，读起《百年孤独》来，还是会觉得比较艰涩难懂。如果要想能顺畅地完成阅读，我们必须先了解清楚，为什么这篇作品会构成阅读障碍。</p>
-<p>解决这个问题之前，咱们先来聊一下外国文学史吧。</p>
-<p>小说兴起的时候，文本的驱动力，是由情节提供的。我们看《鲁滨逊漂流记》，首先，是鲁滨逊这个人进入到我们的视野；然后我们了解他做<span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test14/" data-title="《百年孤独》的阅读方法">阅读全文</div>
-    </div>
-
-    <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><a class="item" href="/page/2/#post-list">2</a><span class="item active">3</span><a class="item" href="/page/4/#post-list">4</a><a class="item" href="/page/5/#post-list">5</a><span class="item">&hellip;</span><a class="item" href="/page/7/#post-list">7</a></div></div>
+    <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><a class="item" href="/page/2/#post-list">2</a><span class="item active">3</span><a class="item" href="/page/4/#post-list">4</a><a class="item" href="/page/5/#post-list">5</a><span class="item">&hellip;</span><a class="item" href="/page/8/#post-list">8</a></div></div>
     <div style="text-align: center">
         <hr>
         <p>© 2016 Weng Chunyi, Powered by Hexo.</p>
@@ -373,7 +383,7 @@
         $('body').removeClass('fade-cover');
     }
 
-    var html = '<a class="extend prev" rel="prev" href="/page/2/#post-list">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#post-list">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#post-list">4</a><a class="page-number" href="/page/5/#post-list">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#post-list">7</a><a class="extend next" rel="next" href="/page/4/#post-list">Next</a>';
+    var html = '<a class="extend prev" rel="prev" href="/page/2/#post-list">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#post-list">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#post-list">4</a><a class="page-number" href="/page/5/#post-list">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#post-list">8</a><a class="extend next" rel="next" href="/page/4/#post-list">Next</a>';
     var d = $(html);
     for(var i=0; i<d.length; ++i){
         if($(d[i]).attr('href') == '/'){

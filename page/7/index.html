@@ -133,10 +133,11 @@
 
         /* 主页中的日志列表 */
         #post-list {
-            width: 100%;
             position: absolute;
             padding: 20px;
-            margin-top: 50px;
+            left: 0px;
+            right: 0px;
+            margin: 50px auto 20px auto;
         }
 
         .post-brief {
@@ -152,6 +153,10 @@
             margin-left: 15px;
         }
 
+        /* 日志 */
+        .blog img {width: 100%; }
+        .img-remark {text-align: center;}
+
         /*弹出窗口*/
         @media screen and (max-width:768px) {
             #myModal .modal-dialog {
@@ -159,6 +164,10 @@
                 left: 0px;
                 right: 0px;
                 margin: auto;
+            }
+
+            #post-list {
+                width: 100%;
             }
         }
         @media screen and (min-width:769px){
@@ -169,7 +178,18 @@
                 right: 0px;
                 margin: auto;
             }
+
+            #post-list {
+                width: 80%;
+            }
         }
+
+        @media screen and (min-width:1000px){
+            #post-list {
+                width: 900px
+            }
+        }
+
         .modal-title {
             text-align: center;
         }
@@ -324,21 +344,27 @@
 <div id="post-list"><!-- 显示日志列表 -->
 
     <div class="post-brief">
-        <h3><strong>艺术</strong></h3>
+        <h3><strong>印象记</strong></h3>
         <p>2016年9月5日</p>
-        <p>要理解莫奈的《睡莲》系列作品，最重要的是理解他这个人。我们先绕个远，再回来说。<br>我国南朝时候有个人叫宗炳，他这个人喜欢旅游。《南史·宗炳传》说他“好山水，爱远游……眷恋庐、衡，不知老之将至。”后来他年纪大了，走不动了，自己感慨道：“老疾俱至，名山恐难遍睹，唯澄怀观道，卧以游之。”具体来说，就是“凡所游履，皆图之于室。”把去过的地方画出来，放家里挂着，过过眼瘾也是好的。<br><a id="more"></a><br>后来有个叫郭熙的人，写了一本书叫《林泉高致》，这本书是讲山水画的。他在开篇谈到，人们为什么喜欢山水画呢？总的来说，就是日常生活或者太枯燥，或者太闹心。而出去玩呢，则有好<span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/art/" data-title="艺术">阅读全文</div>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test4/" data-title="印象记">阅读全文</div>
     </div>
 
     <div class="post-brief">
-        <h3><strong>test</strong></h3>
+        <h3><strong>论诱惑的段数－从米开朗基罗到布歇</strong></h3>
         <p>2016年9月5日</p>
-        <p>这是一篇测试博客</p>
-<span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test/" data-title="test">阅读全文</div>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test2/" data-title="论诱惑的段数－从米开朗基罗到布歇">阅读全文</div>
     </div>
 
-    <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><span class="item">&hellip;</span><a class="item" href="/page/5/#post-list">5</a><a class="item" href="/page/6/#post-list">6</a><span class="item active">7</span></div></div>
+    <div class="post-brief">
+        <h3><strong>艺术</strong></h3>
+        <p>2016年9月5日</p>
+        <p>要理解莫奈的《睡莲》系列作品，最重要的是理解他这个人。我们先绕个远，再回来说。<br>我国南朝时候有个人叫宗炳，他这个人喜欢旅游。《南史·宗炳传》说他“好山水，爱远游……眷恋庐、衡，不知老之将至。”后来他年纪大了，走不动了，自己感慨道：“老疾俱至，名山恐难遍睹，唯澄怀观道，卧以游之。”具体来说，就是“凡所游履，皆图之于室。”把去过的地方画出来，放家里挂着，过过眼瘾也是好的。<br><span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/art/" data-title="艺术">阅读全文</div>
+    </div>
+
+    <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><span class="item">&hellip;</span><a class="item" href="/page/5/#post-list">5</a><a class="item" href="/page/6/#post-list">6</a><span class="item active">7</span><a class="item" href="/page/8/#post-list">8</a></div></div>
     <div style="text-align: center">
         <hr>
         <p>© 2016 Weng Chunyi, Powered by Hexo.</p>
@@ -357,7 +383,7 @@
         $('body').removeClass('fade-cover');
     }
 
-    var html = '<a class="extend prev" rel="prev" href="/page/6/#post-list">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#post-list">5</a><a class="page-number" href="/page/6/#post-list">6</a><span class="page-number current">7</span>';
+    var html = '<a class="extend prev" rel="prev" href="/page/6/#post-list">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#post-list">5</a><a class="page-number" href="/page/6/#post-list">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#post-list">8</a><a class="extend next" rel="next" href="/page/8/#post-list">Next</a>';
     var d = $(html);
     for(var i=0; i<d.length; ++i){
         if($(d[i]).attr('href') == '/'){
