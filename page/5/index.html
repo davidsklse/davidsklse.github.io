@@ -298,6 +298,93 @@
             background-color: #FAFAFA;
         }
 
+        /* 等待效果 */
+        #loading-center-absolute {
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 250px;
+            width: 150px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .object{
+            width: 8px;
+            height: 50px;
+            margin-right:5px;
+            background-color: purple;
+            -webkit-animation: animate 1s infinite;
+            animation: animate 1s infinite;
+            float: left;
+        }
+
+        .object:last-child {
+            margin-right: 0px;
+        }
+
+        .object:nth-child(10){
+            -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+        }
+        .object:nth-child(9){
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+        }
+        .object:nth-child(8){
+            -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+        }
+        .object:nth-child(7){
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+        .object:nth-child(6){
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+        .object:nth-child(5){
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+        .object:nth-child(4){
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+        .object:nth-child(3){
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+        .object:nth-child(2){
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }
+
+
+
+        @-webkit-keyframes animate {
+
+            50% {
+                -ms-transform: scaleY(0);
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+
+            }
+
+
+
+        }
+
+        @keyframes animate {
+            50% {
+                -ms-transform: scaleY(0);
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+            }
+
+
+        }
+
+
     </style>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
@@ -414,19 +501,42 @@
 
 
     });
+
     function show_post(event) {
         var ele = $(event.target);
         var post_url = ele.attr('data-url');
         var post_title = ele.attr('data-title');
+
+        $('#myModal').modal('show');
+        $('#myModal .modal-title').text(post_title);
+        show_waiting();
+
         $.get(
                 post_url,
             function (data) {
-                $('#myModal').modal('show');
-                $('#myModal .modal-title').text(post_title);
                 $('#myModal .modal-body').html(data);
             }
         )
     }
+
+    function show_waiting() {
+        var wait_div = $(
+                '<div id="loading-center-absolute">'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '<div class="object"></div>'+
+                '</div>');
+        $('#myModal .modal-body').empty();
+        $('#myModal .modal-body').append(wait_div);
+    }
+
 </script>
 
 
