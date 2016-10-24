@@ -213,6 +213,9 @@
         #sidebar {
             z-index: 100;
         }
+        #sidebar .modal-content {
+            top: 0px;
+        }
         #sidebar .modal-title {
             text-align: center;
             font-weight: bold;
@@ -431,6 +434,13 @@
 <div id="post-list"><!-- 显示日志列表 -->
 
     <div class="post-brief">
+        <h3><strong>archive</strong></h3>
+        <p>2016年9月5日</p>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/archive/" data-title="archive">阅读全文</div>
+    </div>
+
+    <div class="post-brief">
         <h3><strong>评漆原友纪《虫师》</strong></h3>
         <p>2016年9月5日</p>
         <span>......</span>
@@ -442,13 +452,6 @@
         <p>2016年9月5日</p>
         <span>......</span>
         <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test23/" data-title="冯唐的那根金线，在李银河手里捏着呢">阅读全文</div>
-    </div>
-
-    <div class="post-brief">
-        <h3><strong>看《平凡的世界》和《白鹿原》这些书，对生活有什么帮助</strong></h3>
-        <p>2016年9月5日</p>
-        <span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test22/" data-title="看《平凡的世界》和《白鹿原》这些书，对生活有什么帮助">阅读全文</div>
     </div>
 
     <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><span class="item active">2</span><a class="item" href="/page/3/#post-list">3</a><a class="item" href="/page/4/#post-list">4</a><span class="item">&hellip;</span><a class="item" href="/page/8/#post-list">8</a></div></div>

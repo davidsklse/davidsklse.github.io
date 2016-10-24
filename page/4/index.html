@@ -213,6 +213,9 @@
         #sidebar {
             z-index: 100;
         }
+        #sidebar .modal-content {
+            top: 0px;
+        }
         #sidebar .modal-title {
             text-align: center;
             font-weight: bold;
@@ -431,6 +434,13 @@
 <div id="post-list"><!-- 显示日志列表 -->
 
     <div class="post-brief">
+        <h3><strong>霍乱与爱情的关系</strong></h3>
+        <p>2016年9月5日</p>
+        <span>......</span>
+        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test16/" data-title="霍乱与爱情的关系">阅读全文</div>
+    </div>
+
+    <div class="post-brief">
         <h3><strong>《百年孤独》的阅读方法</strong></h3>
         <p>2016年9月5日</p>
         <span>......</span>
@@ -442,13 +452,6 @@
         <p>2016年9月5日</p>
         <span>......</span>
         <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test14/" data-title="《百年孤独》的阅读方法">阅读全文</div>
-    </div>
-
-    <div class="post-brief">
-        <h3><strong>黑暗童话</strong></h3>
-        <p>2016年9月5日</p>
-        <span>......</span>
-        <div class="btn" onclick="show_post(event); " data-url="https://davidsklse.github.io/2016/10/21/test13/" data-title="黑暗童话">阅读全文</div>
     </div>
 
     <div id="paginator"><div class="ui pagination menu"><a class="item" href="/#post-list">1</a><a class="item" href="/page/2/#post-list">2</a><a class="item" href="/page/3/#post-list">3</a><span class="item active">4</span><a class="item" href="/page/5/#post-list">5</a><a class="item" href="/page/6/#post-list">6</a><span class="item">&hellip;</span><a class="item" href="/page/8/#post-list">8</a></div></div>
