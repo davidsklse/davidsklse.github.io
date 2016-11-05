@@ -1,7 +1,105 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    
+    <title>在解决国企 | 我是希尔瑞斯</title>
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+<button class="menu-btn"></button>
+<script type="text/javascript">
+    /*菜单出现*/
+    $('.menu-btn').click(function (event) {
+        event.stopPropagation();
+        $('#menu-sidebar').addClass('active');
+        $('body').addClass('inactive');
+    })
 
-    <div class="blog">
-<p>5.20年前朱相在解决国企三角债的时候，经常出现滞销产品好不容易在政府帮助安排下去库存之后，该国企又生产了一仓库滞销品，最后中央明白，只能不管它了，终结三角债发展为终结国企。</p>
+    /*菜单消失*/
+    $('body').click(function(){
+        $('#menu-sidebar').removeClass('active');
+        $('body').removeClass('inactive');
+    })
+</script>
+<div id="main" style="display: none;">
+    <div id="post">
+<div id="content">
+    <h2>在解决国企</h2>
+    <p>2016-10-21 12:09:03</p>
+    <p>5.20年前朱相在解决国企三角债的时候，经常出现滞销产品好不容易在政府帮助安排下去库存之后，该国企又生产了一仓库滞销品，最后中央明白，只能不管它了，终结三角债发展为终结国企。</p>
 <p>6.基建大跃进大概可以解释中国09年以来增量GDP的约70%以上。包括了基建项目本身产值和从业人员消费再循环。08年之前，外贸劳工密集型产业，官方用词为加工贸易，区别于一般贸易（华为手机算一般贸易，包括知识产权、大部分零部件国内设计制造与整机组装；苹果手机算加工贸易，纯手工劳动组装），可以解释当时GDP的约70%以上。加工贸易在广动省的腾笼换鸟口号声中被蔑视和被铲除，移到了内陆省份一部分，出国一部分。由于09年后，基建产业链大量新招用工，传统对外贸易部门和大跃进部门形成了对普工劳动力的争夺局面。10年后，媒体常常提起用工荒。2012年，随着农村剩余劳动力供给达到极限，刘易斯拐点来临，中国普工的供给与需求达成历史性的平衡，同时月工资跃升到3000元以上。这样就开始令利润微薄的加工贸易产业和大量低端一般贸易产业的企业主苦不堪言。</p>
 
 </div>
+<div id="right-bar">
+    <h4>所属类别</h4>
+<div>
+    <h4>
+        
+        
+        
+        空
+        
+    </h4>
+    
+</div>
+    <h4>所属标签</h4>
+<div>
+    
+    所属标签：空
+    
+</div>
+</div>
+</div>
+<div style="position: relative; max-width: 900px; margin: auto; overflow: hidden;">
+    
+    <div style="float: left"><a href="/2016/10/21/test16/">上一篇，霍乱与爱情的关系</a></div>
+    
+    
+    <div style="float: right"><a href="/2016/10/21/test4/">下一篇，印象记</a></div>
+    
+</div>
 
+<script type="text/javascript">
+    $(window).scroll(function () {
+        var a = $('#right-bar div:nth-child(2)').offset().top - $(document).scrollTop();
+        console.log(a);
+    })
+</script>
+    <div id="menu-sidebar">
+    <h2>我是希尔瑞斯</h2>
+    <img src="/img/cover.jpg" id="cover-img">
+    <div id="profile">
+        <p>计算机民科/好奇心爆棚</p>
+        <p><span class="logo normal local-span"></span>宁波</p>
+        <p><span class="logo normal email-span"></span><a href="mailto:739970807@qq.com">739970807@qq.com</a> </p>
+    </div>
+    <div id="menu-content">
+        <ul>
+            <li><span class="logo normal home-span"></span><a href="/">首页</a></li>
+            <li><span class="logo normal archive-span"></span><a href="/archives">归档</a></li>
+            <li><span class="logo normal category-span"></span><a href="/categories">分类</a></li>
+            <li><span class="logo normal tags-span"></span><a href="/tags">标签</a></li>
+            <!--li><span class="logo normal about-span"></span><a>关于</a></li-->
+        </ul>
+    </div>
+</div>
+    <div id="footer">
+        <p>@ 2016-2017 </p>
+        <p>Powered by Hexo, Written & Designed by Weng Chunyi</p>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#main').fadeIn(1000);
+    })
+
+</script>
+</html>

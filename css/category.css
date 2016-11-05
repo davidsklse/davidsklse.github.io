@@ -1,0 +1,27 @@
+#category-list,
+#tag-list {
+  text-align: center;
+}
+#category-list .category-list-item,
+#tag-list .category-list-item,
+#category-list .tag-list-item,
+#tag-list .tag-list-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#category-list .category-list-child,
+#tag-list .category-list-child {
+  margin-left: 20px;
+}
+#category-list .category-list-count:before,
+#tag-list .category-list-count:before,
+#category-list .tag-list-count:before,
+#tag-list .tag-list-count:before {
+  content: "（共";
+}
+#category-list .category-list-count:after,
+#tag-list .category-list-count:after,
+#category-list .tag-list-count:after,
+#tag-list .tag-list-count:after {
+  content: "篇文章）";
+}

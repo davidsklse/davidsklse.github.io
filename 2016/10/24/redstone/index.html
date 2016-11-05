@@ -1,6 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    
+    <title>红楼梦饮食谱 | 我是希尔瑞斯</title>
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+<button class="menu-btn"></button>
+<script type="text/javascript">
+    /*菜单出现*/
+    $('.menu-btn').click(function (event) {
+        event.stopPropagation();
+        $('#menu-sidebar').addClass('active');
+        $('body').addClass('inactive');
+    })
 
-    <div class="blog">
-</p>
+    /*菜单消失*/
+    $('body').click(function(){
+        $('#menu-sidebar').removeClass('active');
+        $('body').removeClass('inactive');
+    })
+</script>
+<div id="main" style="display: none;">
+    <div id="post">
+<div id="content">
+    <h2>红楼梦饮食谱</h2>
+    <p>2016-10-24 09:52:45</p>
+    <p>这是阅读《红楼梦饮食谱》一书的读书笔记，虽然我对《红楼梦》这本书不是特别感兴趣，但是对于书中反映的一些饮食文化十分的好奇，于是就抄记了其中一些有趣的点。突然想起王小波的一句话，<q>我们民族过去钻研四书五经，现在钻研红楼梦。四书也好，红楼梦也罢，本来只是几本书，却硬要把整个大千世界都塞在其中。我相信世界不会因此得益，而是因此受害。</q><a id="more"></a></p>
 <h3 id="茶"><a href="#茶" class="headerlink" title="茶"></a>茶</h3><p>《红楼梦》中经常提到品茶，品茶不同于喝茶，正所谓一杯为品，二杯是解渴的蠢物，三杯就是饮驴了。</p>
 <p>与如今的茶道茶艺不同，古人喝茶特别讲究水，尤其在江南一带，人们一向讲究<q>洞庭碧螺惠泉水，西湖龙井虎跑泉</q>。这让我想起张岱在《陶庵梦忆》中记载的一个故事。某日张岱去南京拜访一位对茶很有研究的老先生，品茶时候惊讶地发现泡茶所用的是惠泉水，追问为何千里之外的泉水可以运到南京而水质没有变坏。于是长者开始大谈自己的运水技巧，洗淘泉井，然后在静夜里等候新泉水，运水的瓮里铺满石子，以保证水质，船行全借风力，尽量不人为地晃动船身，动摇水质。这样运来的水，比新鲜的惠泉水还要好。</p>
 <p>但是古时为了喝茶能如此折腾的毕竟是少数人，人们就想到用雨水或雪水代替，号曰“天泉”。二十三回中就提到过，<q>却喜侍儿知试茗，扫将新雪及时烹</q>。</p>
@@ -10,10 +41,92 @@
 <h3 id="大米"><a href="#大米" class="headerlink" title="大米"></a>大米</h3><p>在超市经常能见到有卖“梗米”，渐渐就把“梗米”这个词等同于“米”。其实在古代，米分为两种，梗米多属晚稻，生长期要一百多天，光照时间长，获得的养分足，颗粒饱满，营养丰富，饭白味香，是大米中的上品，只有有钱人家才吃得起。与梗米相对的是籼米，多属早稻，播种时气候尚冷，受天气制约，米粒比较瘦小，相貌粗糙，质次价廉，南方人俗称糙米。但由于其生长期只需要两个来月，可以缩短土地的周转期。干粗活的婆子、小厮等等都只能吃籼米，是无资格享有梗米的。</p>
 <h3 id="香皂"><a href="#香皂" class="headerlink" title="香皂"></a>香皂</h3><p>鹅油是高级护肤品，清朝宫廷内曾用它制作护肤香皂，但一般臣僚不可多得，只有皇帝引见时才有幸使用，故名“引见胰”。</p>
 <h3 id="野味"><a href="#野味" class="headerlink" title="野味"></a>野味</h3><p>古人认为野鸡在夏秋时节吃的“活食”中有毒虫，能间接造成对人体的危害，所以一般在隆冬季节才吃野鸡。五十三回中庄头乌年终来交年租年礼的时候，一次性就送上了四百只野鸡。除了野鸡，七十五回中还提到了“风腌果子狸”，袁枚在《随园食单》中写道：“果子狸，鲜者难得。其腌干者，用蜜酒酿蒸熟，快刀切片上桌，先用米泔水泡一日，去尽盐秽。较火腿觉嫩而肥。”不过红楼梦里提到过最多的是<del>鲁豫</del>鲈鱼，因为曹雪芹喜欢。古时非常著名的鲈鱼脍，就是用快刀切得很薄的生鱼片，浇上捣碎的黄橙（即所谓“金齑”）或其他调色、调味品拌一拌就端上餐桌供食，而今莼菜鲈鱼也是非常美味的一道名菜。<br><img src="/2016/10/24/redstone/fish.jpeg" alt="莼菜鲈鱼" title="莼菜鲈鱼"></p>
-<p class='img-remark'>图1，莼菜鲈鱼</p>
+<p class="img-remark">图1，莼菜鲈鱼</p>
 
 <h3 id="蔬菜"><a href="#蔬菜" class="headerlink" title="蔬菜"></a>蔬菜</h3><p>二十六回薛蟠生日，有人送来鲜藕。在古代，藕被人们当成水果食用，盛夏时节即采收上市，炒菜吃的老藕要到秋季才采挖。</p>
 <h3 id="酒"><a href="#酒" class="headerlink" title="酒"></a>酒</h3><p>三十八回中，黛玉吃螃蟹后觉得不舒服，宝玉便送上一壶合欢花浸的烧酒。合欢花有安神、解郁等功效。用它浸酒喝可以能祛除寒气。合欢花在中药店里有售，一般情况下的日用量在5-10克左右，如将50克合欢花浸500克烧酒，可饮一个星期。<br><img src="/2016/10/24/redstone/flower.jpg" alt="合欢花" title="合欢花"></p>
-<p class='img-remark'>图2，合欢花</p>
+<p class="img-remark">图2，合欢花</p>
+
+
+
+
+
+
+</div>
+<div id="right-bar">
+    <h4>所属类别</h4>
+<div>
+    <h4>
+        
+        
+        
+        <a href="/categories/读书笔记/" target='_blank'>读书笔记(1)</a>
+        
+    </h4>
+    
+    <ul class="post-category-list-list"><li class="post-category-list-list-item"><a class="post-category-list-list-link" href="/2016/10/24/redstone/">红楼梦饮食谱</a></li></ul>
+    
+</div>
+    <h4>所属标签</h4>
+<div>
+    
+    
+    
+    <h4><a href="/tags/美食/" target="_blank">美食(1)</a> </h4>
+    <ul class="post-tag-list-list"><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/24/redstone/">红楼梦饮食谱</a></li></ul>
+    
+    <h4><a href="/tags/读书笔记/" target="_blank">读书笔记(1)</a> </h4>
+    <ul class="post-tag-list-list"><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/24/redstone/">红楼梦饮食谱</a></li></ul>
+    
+    
+</div>
+</div>
+</div>
+<div style="position: relative; max-width: 900px; margin: auto; overflow: hidden;">
+    
+    <div style="float: left"><a href="/2016/10/25/css-box-model-block-element-and-inline-element/">上一篇，深入浅出盒模型之一：块元素和内联元素</a></div>
+    
+    
+    <div style="float: right"><a href="/2016/10/22/hkeconomyhis/">下一篇，极简香港经济史</a></div>
+    
 </div>
 
+<script type="text/javascript">
+    $(window).scroll(function () {
+        var a = $('#right-bar div:nth-child(2)').offset().top - $(document).scrollTop();
+        console.log(a);
+    })
+</script>
+    <div id="menu-sidebar">
+    <h2>我是希尔瑞斯</h2>
+    <img src="/img/cover.jpg" id="cover-img">
+    <div id="profile">
+        <p>计算机民科/好奇心爆棚</p>
+        <p><span class="logo normal local-span"></span>宁波</p>
+        <p><span class="logo normal email-span"></span><a href="mailto:739970807@qq.com">739970807@qq.com</a> </p>
+    </div>
+    <div id="menu-content">
+        <ul>
+            <li><span class="logo normal home-span"></span><a href="/">首页</a></li>
+            <li><span class="logo normal archive-span"></span><a href="/archives">归档</a></li>
+            <li><span class="logo normal category-span"></span><a href="/categories">分类</a></li>
+            <li><span class="logo normal tags-span"></span><a href="/tags">标签</a></li>
+            <!--li><span class="logo normal about-span"></span><a>关于</a></li-->
+        </ul>
+    </div>
+</div>
+    <div id="footer">
+        <p>@ 2016-2017 </p>
+        <p>Powered by Hexo, Written & Designed by Weng Chunyi</p>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#main').fadeIn(1000);
+    })
+
+</script>
+</html>

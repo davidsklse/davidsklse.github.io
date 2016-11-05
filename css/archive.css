@@ -1,0 +1,15 @@
+.archive-list-item {
+  margin-top: 15px;
+}
+.archive-list-link:after {
+  content: "年";
+}
+.archive-list-count {
+  margin-left: 15px;
+}
+.archive-list-count:before {
+  content: "共";
+}
+.archive-list-count:after {
+  content: "篇文章";
+}

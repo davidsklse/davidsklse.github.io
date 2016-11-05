@@ -1,0 +1,156 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    
+    <title>深入浅出盒模型之一：块元素和内联元素 | 我是希尔瑞斯</title>
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+<button class="menu-btn"></button>
+<script type="text/javascript">
+    /*菜单出现*/
+    $('.menu-btn').click(function (event) {
+        event.stopPropagation();
+        $('#menu-sidebar').addClass('active');
+        $('body').addClass('inactive');
+    })
+
+    /*菜单消失*/
+    $('body').click(function(){
+        $('#menu-sidebar').removeClass('active');
+        $('body').removeClass('inactive');
+    })
+</script>
+<div id="main" style="display: none;">
+    <div id="post">
+<div id="content">
+    <h2>深入浅出盒模型之一：块元素和内联元素</h2>
+    <p>2016-10-25 09:54:12</p>
+    <p>在网页中，每一个元素都占据了一块矩形的区域，就像一个盒子，因此，浏览器就把DOM树中的每一个元素都抽象为一个盒模型（Box Model），然后根据盒模型的类型（例如block、inline）和属性值（例如width、height）将元素渲染绘制在屏幕上。常见的盒模型有块元素和内联元素<a id="more"></a></p>
+<h3 id="什么是盒模型"><a href="#什么是盒模型" class="headerlink" title="什么是盒模型"></a>什么是盒模型</h3><p>在网页中，每一个元素都占据了一块矩形的区域，就像一个盒子，因此，浏览器就把DOM树中的每一个元素都抽象为一个盒模型（Box Model），然后根据盒模型的类型（例如block、inline）和属性值（例如width、height）将元素渲染绘制在屏幕上（术语称为视口，viewport）。</p>
+<h3 id="盒模型有哪些"><a href="#盒模型有哪些" class="headerlink" title="盒模型有哪些"></a>盒模型有哪些</h3><p>常见的盒模型有块级元素（block elements）和内联元素（inline elements），可以使用display属性改变元素的默认盒模型，例如将默认为内联元素的<code>&lt;span&gt;</code>改变为块级元素：<br><figure class="highlight css"><figcaption><span>css</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span> &#123; <span class="attribute">display</span>: block; &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><p>块级元素是HTML布局的骨干。块级元素在布局的时候占据了整行宽度，并且从上至下依次排列：<br>
+<style type="text/css">
+#test1 { border-style: solid; }
+#test1 div { height: 50px; font-size: 40px; text-align:center;}
+#test1 div:nth-child(1) { background-color: #ef8a70; }
+#test1 div:nth-child(2) { background-color: #ffe11a; }
+</style>
+<div class="test-html">
+<div id="test1">
+    <div>block element A</div>
+    <div>block element B</div>
+</div>
+</div>
+</p>
+<p>块级元素一般充当其他元素的容器（术语称之为包含块，contain box），块级元素可以容纳块级元素和内联元素，但是内联元素只能容纳内联元素。常见的块级元素包括：</p>
+<blockquote>
+
+&ltpre> &ltdiv>、&ltdl>、&ltform>、&lth>、&ltli>、&ltol>、&lthr>、&ltp>、&lttable>、&ltul>
+
+</blockquote>
+<h3 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h3><p>内联元素从左到右排列成一行，它的宽度恰好可以包住其中的内容。<br>
+<style type="text/css">
+#test2 span { font-size: 20px;}
+#test2 span:nth-child(1) { background-color: #ef8a70;  }
+#test2 span:nth-child(2) { background-color: #ffe11a; }
+</style>
+<div class="test-html">
+<div id="test2">
+<span>inline element A</span><span>inline element B</span>
+</div>
+</div>
+</p>
+<p>常见的内联元素包括：</p>
+<blockquote>
+
+&ltimg>、&ltobject>、&ltspan>、&ltbutton,>、&ltinput>、&ltlabel>、&ltselect>、&lttextarea>
+
+</blockquote>
+
+</div>
+<div id="right-bar">
+    <h4>所属类别</h4>
+<div>
+    <h4>
+        
+        
+        
+        <a href="/categories/技术/前端/CSS/" target='_blank'>CSS(2)</a>
+        
+    </h4>
+    
+    <ul class="post-category-list-list"><li class="post-category-list-list-item"><a class="post-category-list-list-link" href="/2016/10/25/css-box-model-basic-box/">深入浅出盒模型之二：盒模型基本概念</a></li><li class="post-category-list-list-item"><a class="post-category-list-list-link" href="/2016/10/25/css-box-model-block-element-and-inline-element/">深入浅出盒模型之一：块元素和内联元素</a></li></ul>
+    
+</div>
+    <h4>所属标签</h4>
+<div>
+    
+    
+    
+    <h4><a href="/tags/CSS/" target="_blank">CSS(2)</a> </h4>
+    <ul class="post-tag-list-list"><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/25/css-box-model-basic-box/">深入浅出盒模型之二：盒模型基本概念</a></li><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/25/css-box-model-block-element-and-inline-element/">深入浅出盒模型之一：块元素和内联元素</a></li></ul>
+    
+    <h4><a href="/tags/前端/" target="_blank">前端(2)</a> </h4>
+    <ul class="post-tag-list-list"><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/25/css-box-model-basic-box/">深入浅出盒模型之二：盒模型基本概念</a></li><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/25/css-box-model-block-element-and-inline-element/">深入浅出盒模型之一：块元素和内联元素</a></li></ul>
+    
+    <h4><a href="/tags/盒模型/" target="_blank">盒模型(2)</a> </h4>
+    <ul class="post-tag-list-list"><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/25/css-box-model-basic-box/">深入浅出盒模型之二：盒模型基本概念</a></li><li class="post-tag-list-list-item"><a class="post-tag-list-list-link" href="/2016/10/25/css-box-model-block-element-and-inline-element/">深入浅出盒模型之一：块元素和内联元素</a></li></ul>
+    
+    
+</div>
+</div>
+</div>
+<div style="position: relative; max-width: 900px; margin: auto; overflow: hidden;">
+    
+    <div style="float: left"><a href="/2016/10/25/css-box-model-basic-box/">上一篇，深入浅出盒模型之二：盒模型基本概念</a></div>
+    
+    
+    <div style="float: right"><a href="/2016/10/24/redstone/">下一篇，红楼梦饮食谱</a></div>
+    
+</div>
+
+<script type="text/javascript">
+    $(window).scroll(function () {
+        var a = $('#right-bar div:nth-child(2)').offset().top - $(document).scrollTop();
+        console.log(a);
+    })
+</script>
+    <div id="menu-sidebar">
+    <h2>我是希尔瑞斯</h2>
+    <img src="/img/cover.jpg" id="cover-img">
+    <div id="profile">
+        <p>计算机民科/好奇心爆棚</p>
+        <p><span class="logo normal local-span"></span>宁波</p>
+        <p><span class="logo normal email-span"></span><a href="mailto:739970807@qq.com">739970807@qq.com</a> </p>
+    </div>
+    <div id="menu-content">
+        <ul>
+            <li><span class="logo normal home-span"></span><a href="/">首页</a></li>
+            <li><span class="logo normal archive-span"></span><a href="/archives">归档</a></li>
+            <li><span class="logo normal category-span"></span><a href="/categories">分类</a></li>
+            <li><span class="logo normal tags-span"></span><a href="/tags">标签</a></li>
+            <!--li><span class="logo normal about-span"></span><a>关于</a></li-->
+        </ul>
+    </div>
+</div>
+    <div id="footer">
+        <p>@ 2016-2017 </p>
+        <p>Powered by Hexo, Written & Designed by Weng Chunyi</p>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#main').fadeIn(1000);
+    })
+
+</script>
+</html>

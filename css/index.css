@@ -1,0 +1,45 @@
+.blog-brief {
+  margin-bottom: 50px;
+}
+.blog-brief h2 {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.pretitle {
+  color: #818181;
+  font-size: small;
+}
+.pretitle a {
+  margin: 5px;
+  color: #818181;
+}
+.pretitle+h2 {
+  margin-top: 0px;
+}
+.blog-tags {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.tag-link {
+  display: inline-block;
+  border: 0.5px solid #00aced;
+  border-radius: 7px;
+  padding: 3px 5px 3px 5px;
+  font-size: small;
+  margin-right: 5px;
+}
+.tag-link:hover {
+  background-color: rgba(0,172,237,0.3);
+}
+.excerpt p {
+  margin-top: 0px;
+}
+#paginator {
+  margin: $margin-top auto 0 auto;
+  max-width: $post-list-width;
+  text-align: center;
+}
+#paginator a,
+#paginator span {
+  margin: 15px;
+}

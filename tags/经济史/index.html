@@ -1,5 +1,3 @@
-
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -9,478 +7,163 @@
     
     <title>我是希尔瑞斯</title>
     
-    <link rel="icon" href="/favicon.png">
-    
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    
-
-    <style type="text/css">
-        @font-face {
-            font-family: fz;
-            src: url('/fonts/fz.ttf');
-        }
-
-        body {
-            font-family: 'fz', fz, "Comic Sans MS","幼圆","黑体";
-
-            overflow-x: hidden;
-        }
-        body.trans div {
-            transition: opacity 1s ease-in;
-        }
-
-        body.fade-cover {
-            position:fixed;
-            width: 100%;
-            height: 100%;
-            overflow-y: hidden;
-        }
-
-        /*导航栏*/
-        nav.navbar-default {
-            background-color: transparent;
-            position: absolute;
-            width: 100%;
-            top: 0px;
-            z-index: 50;
-        } /*导航栏背景透明*/
-
-        /*网页内容居中*/
-        #container {
-            max-width: 900px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            margin-top:100px;
-        }
-
-        .hover_enable:hover {cursor: pointer;}
-        .hover_big:hover {
-            transition: all 0.3s ease-in;
-            transform: scale(1.3);
-
-        }
-
-        svg text {
-            pointer-events: none;
-            font-size: 7px;
-        }
-
-        a:hover {
-            text-decoration: none;
-        }
-
-        .modal-open {
-            overflow-y: auto;
-        }
-
-        #menu_btn {
-            float: left;
-            border: none;
-        }
-
-        /* 主页 */
-        #cover {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .fade-post #cover {
-            opacity: 0;
-            z-index: -1;
-        }
-
-        .fade-post #post-list {
-            opacity: 1;
-            z-index: 1;
-        }
-
-        .fade-cover #cover {
-            opacity: 1;
-            z-index: 1;
-        }
-
-        .fade-cover #post-list {
-            opacity: 0;
-            z-index: -1;
-        }
-
-        #cover>div {
-            top:0; bottom: 0;
-            margin: auto;
-            width: 100%;
-            text-align: center;
-            background-color: transparent;
-            height: 100px;
-            position: absolute;
-        }
-
-        #cover svg {
-            width: 100%;
-            height: 99%;
-        }
-
-        div.btn {
-            padding: 5px 10px 5px 10px;
-            border-radius: 5px;
-            border-style: solid;
-            border-width: 1px;
-            border-color: lightgray;
-        }
-
-
-        /* 主页中的日志列表 */
-        #post-list {
-            position: absolute;
-            padding: 20px;
-            left: 0px;
-            right: 0px;
-            margin: 50px auto 20px auto;
-        }
-
-        .post-brief {
-            margin: 20px 10px 40px 10px;
-        }
-
-        #paginator {
-            text-align: center;
-            font-size: 16px;
-        }
-
-        #paginator a,span {
-            margin-left: 15px;
-        }
-
-        /* 日志 */
-        .blog img {width: 100%; }
-        .img-remark {text-align: center;}
-
-        /*弹出窗口*/
-        @media screen and (max-width:768px) {
-            #myModal .modal-dialog {
-                width: 90%;
-                left: 0px;
-                right: 0px;
-                margin: auto;
-            }
-
-            #post-list {
-                width: 100%;
-            }
-        }
-        @media screen and (min-width:769px){
-            #myModal .modal-dialog {
-                width: 80%;
-                max-width: 800px;
-                left: 0px;
-                right: 0px;
-                margin: auto;
-            }
-
-            #post-list {
-                width: 80%;
-            }
-        }
-
-        @media screen and (min-width:1000px){
-            #post-list {
-                width: 900px
-            }
-        }
-
-        .modal-title {
-            text-align: center;
-        }
-
-        /* 归档页 */
-        #archive {
-            margin-top: 100px;
-        }
-
-        /* 关于 */
-        #about {
-            margin-top: 100px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-
-        /*侧栏菜单*/
-        #img-profile {
-            border-radius: 10px;
-        }
-        #sidebar {
-            z-index: 100;
-        }
-        #sidebar .modal-content {
-            top: 0px;
-        }
-        #sidebar .modal-title {
-            text-align: center;
-            font-weight: bold;
-        }
-
-        #sidebar .modal-body p{
-            margin: 10px;
-        }
-
-        #sidebar .modal-body .panel{
-            border-style: solid;
-            border-width: 1px;
-            border-color: lightgrey;
-            margin-top: 10px;
-
-        }
-
-        .glyphicon {
-            margin-right: 5px;
-        }
-
-        #sidebar .modal-body .panel-body {
-            padding: 10px;
-        }
-
-        .modal.left .modal-dialog,
-        .modal.right .modal-dialog {
-            position: fixed;
-            margin: auto;
-            width: 240px;
-            height: 100%;
-            -webkit-transform: translate3d(0%, 0, 0);
-            -ms-transform: translate3d(0%, 0, 0);
-            -o-transform: translate3d(0%, 0, 0);
-            transform: translate3d(0%, 0, 0);
-        }
-
-        .modal.left .modal-content,
-        .modal.right .modal-content {
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        .modal.left .modal-body,
-        .modal.right .modal-body {
-            padding: 15px 15px 80px;
-        }
-
-        /*Left*/
-        .modal.left.fade .modal-dialog{
-            left: -320px;
-            -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
-            -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
-            -o-transition: opacity 0.3s linear, left 0.3s ease-out;
-            transition: opacity 0.3s linear, left 0.3s ease-out;
-        }
-
-        .modal.left.fade.in .modal-dialog{
-            left: 0;
-        }
-
-        /*Right*/
-        .modal.right.fade .modal-dialog {
-            right: -320px;
-            -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-            transition: opacity 0.3s linear, right 0.3s ease-out;
-        }
-
-        .modal.right.fade.in .modal-dialog {
-            right: 0;
-        }
-
-        /* ----- MODAL STYLE ----- */
-        .modal-content {
-            border-radius: 0;
-            border: none;
-        }
-
-        .modal-header {
-            border-bottom-color: #EEEEEE;
-            background-color: #FAFAFA;
-        }
-
-        /* 等待效果 */
-        #loading-center-absolute {
-            left: 0;
-            right: 0;
-            margin: auto;
-            height: 250px;
-            width: 150px;
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-        .object{
-            width: 8px;
-            height: 50px;
-            margin-right:5px;
-            background-color: purple;
-            -webkit-animation: animate 1s infinite;
-            animation: animate 1s infinite;
-            float: left;
-        }
-
-        .object:last-child {
-            margin-right: 0px;
-        }
-
-        .object:nth-child(10){
-            -webkit-animation-delay: 0.9s;
-            animation-delay: 0.9s;
-        }
-        .object:nth-child(9){
-            -webkit-animation-delay: 0.8s;
-            animation-delay: 0.8s;
-        }
-        .object:nth-child(8){
-            -webkit-animation-delay: 0.7s;
-            animation-delay: 0.7s;
-        }
-        .object:nth-child(7){
-            -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-        }
-        .object:nth-child(6){
-            -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-        }
-        .object:nth-child(5){
-            -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s;
-        }
-        .object:nth-child(4){
-            -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
-        }
-        .object:nth-child(3){
-            -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
-        }
-        .object:nth-child(2){
-            -webkit-animation-delay: 0.1s;
-            animation-delay: 0.1s;
-        }
-
-
-
-        @-webkit-keyframes animate {
-
-            50% {
-                -ms-transform: scaleY(0);
-                -webkit-transform: scaleY(0);
-                transform: scaleY(0);
-
-            }
-
-
-
-        }
-
-        @keyframes animate {
-            50% {
-                -ms-transform: scaleY(0);
-                -webkit-transform: scaleY(0);
-                transform: scaleY(0);
-            }
-
-
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="/css/main.css">
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    </script>
 </head>
-
-<body class="trans">
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="btn btn-default btn-lg" id="menu_btn" >
-                <span class="glyphicon glyphicon-align-justify"></span>
-            </button>
-        </div>
-
-
-    </div><!-- /.container-fluid -->
-</nav>
-
-
-
+<body>
+<button class="menu-btn"></button>
 <script type="text/javascript">
-    $('#menu_btn').click(
-            function () {
-                $('#sidebar').modal('show');
-            }
-    )
-</script> 
+    /*菜单出现*/
+    $('.menu-btn').click(function (event) {
+        event.stopPropagation();
+        $('#menu-sidebar').addClass('active');
+        $('body').addClass('inactive');
+    })
 
-<div id="archive">
-
-</div>
-
-<div class="modal left fade" id="sidebar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="modal-title">我是希尔瑞斯</h3>
-            </div>
-
-            <div class="modal-body">
-                <img src="/imgs/profile.jpg" width="100%" id="img-profile">
-                <div  class="panel panel-default ">
-                    <div class="panel-body">
-                    <p>计算机民科 / 好奇心爆棚 / 吃藕</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span>宁波</p>
-                    <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:739970807@qq.com">739970807@qq.com</a></p>
-                    </div>
-                </div>
-                <ul class="list-group menu">
-                    <li class="list-group-item"><a id="index" href="/#cover">首页</a> </li>
-                    <li class="list-group-item"><a id="posts" href="/#post-list">日志</a> </li>
-                    <li class="list-group-item"><a href="/about">关于</a></li>
-                </ul>
-            </div>
-
-        </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-</div><!-- modal -->
-
-<script type="application/javascript">
-    $('#index').click(function (e) {
-        console.log('a');
-        $('#sidebar').modal('hide');
-        show_cover();
-    });
-
-    $('#posts').click(function (e) {
-        console.log('a');
-        $('#sidebar').modal('hide');
-        show_posts();
-    });
-
+    /*菜单消失*/
+    $('body').click(function(){
+        $('#menu-sidebar').removeClass('active');
+        $('body').removeClass('inactive');
+    })
 </script>
+<div id="main" style="display: none;">
+    <div id="tag-list">
+    
+        
+        
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+        
+            
+        
+            
+        
+        
+        
+        
+        
+            
+        
+            
+        
+            
+        
+        
+        
+        
+        
+            
+        
+            
+        
+        
+            
+        
+        
+        
+        
+            
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h2>经济史共有1篇文章</h2>
+        
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h2 class="modal-title">Modal title</h2>
-            </div>
-            <div class="modal-body"></div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
-            </div>
-        </div>
+<p>
+    <span style="color:#818181">2016-10-22</span>
+    <a href="/2016/10/22/hkeconomyhis/" target="_blank">极简香港经济史</a>（共1393字）</p>
+
+    
+</div>
+    <div id="menu-sidebar">
+    <h2>我是希尔瑞斯</h2>
+    <img src="/img/cover.jpg" id="cover-img">
+    <div id="profile">
+        <p>计算机民科/好奇心爆棚</p>
+        <p><span class="logo normal local-span"></span>宁波</p>
+        <p><span class="logo normal email-span"></span><a href="mailto:739970807@qq.com">739970807@qq.com</a> </p>
+    </div>
+    <div id="menu-content">
+        <ul>
+            <li><span class="logo normal home-span"></span><a href="/">首页</a></li>
+            <li><span class="logo normal archive-span"></span><a href="/archives">归档</a></li>
+            <li><span class="logo normal category-span"></span><a href="/categories">分类</a></li>
+            <li><span class="logo normal tags-span"></span><a href="/tags">标签</a></li>
+            <!--li><span class="logo normal about-span"></span><a>关于</a></li-->
+        </ul>
     </div>
 </div>
-</body>
-</html>
+    <div id="footer">
+        <p>@ 2016-2017 </p>
+        <p>Powered by Hexo, Written & Designed by Weng Chunyi</p>
+    </div>
+</div>
 
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#main').fadeIn(1000);
+    })
+
+</script>
+</html>

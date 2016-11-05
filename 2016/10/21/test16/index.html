@@ -1,6 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    
+    <title>霍乱与爱情的关系 | 我是希尔瑞斯</title>
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+<button class="menu-btn"></button>
+<script type="text/javascript">
+    /*菜单出现*/
+    $('.menu-btn').click(function (event) {
+        event.stopPropagation();
+        $('#menu-sidebar').addClass('active');
+        $('body').addClass('inactive');
+    })
 
-    <div class="blog">
-<p>公正而论，如果让在世作家选择最喜欢的作家的话，我相信50%以上的作家都会毫不犹豫的说是马尔克斯，他确实是当世最伟大的作家。<br>    ——余华</p>
+    /*菜单消失*/
+    $('body').click(function(){
+        $('#menu-sidebar').removeClass('active');
+        $('body').removeClass('inactive');
+    })
+</script>
+<div id="main" style="display: none;">
+    <div id="post">
+<div id="content">
+    <h2>霍乱与爱情的关系</h2>
+    <p>2016-10-21 12:09:30</p>
+    <p>公正而论，如果让在世作家选择最喜欢的作家的话，我相信50%以上的作家都会毫不犹豫的说是马尔克斯，他确实是当世最伟大的作家。<br>    ——余华</p>
 <p>一、霍乱之于爱情</p>
 <p>相思病，也有着和霍乱相同的症状。迅速扩散，持久蔓延；不能治愈，只能自愈。你无法抵御它，除非相思，已经病入膏肓。</p>
 <pre><code>“实际上，霍乱并不管你是什么肤色和何种出身。同突然蔓延开来一样，霍乱又突然停止了，从来没弄清楚到底有多少人死于非命，这倒不是无法统计，而是因为我们最常见的美德之一，就是对自己的不幸逆来顺受。”
@@ -12,4 +43,71 @@
 <p>第 一次出现“霍乱”一词，是在小说的开头，作者描述乌尔比诺“到了八十一岁，他依然保持着在霍乱流行期后不久从巴黎返回时的那种潇洒风度和欢快神态”。而八 十一岁的乌尔比诺，实际上已是右耳接近失聪，步伐蹒跚，记忆衰退。只是通过带银柄的拐杖、装满医疗器械的手提箱和一身得体的服装来维持他的学术上的权威和 尊严。</p>
 
 </div>
+<div id="right-bar">
+    <h4>所属类别</h4>
+<div>
+    <h4>
+        
+        
+        
+        空
+        
+    </h4>
+    
+</div>
+    <h4>所属标签</h4>
+<div>
+    
+    所属标签：空
+    
+</div>
+</div>
+</div>
+<div style="position: relative; max-width: 900px; margin: auto; overflow: hidden;">
+    
+    <div style="float: left"><a href="/2016/10/21/test17/">上一篇，《红楼梦》中林黛玉为何如此小气</a></div>
+    
+    
+    <div style="float: right"><a href="/2016/10/21/test3/">下一篇，在解决国企</a></div>
+    
+</div>
 
+<script type="text/javascript">
+    $(window).scroll(function () {
+        var a = $('#right-bar div:nth-child(2)').offset().top - $(document).scrollTop();
+        console.log(a);
+    })
+</script>
+    <div id="menu-sidebar">
+    <h2>我是希尔瑞斯</h2>
+    <img src="/img/cover.jpg" id="cover-img">
+    <div id="profile">
+        <p>计算机民科/好奇心爆棚</p>
+        <p><span class="logo normal local-span"></span>宁波</p>
+        <p><span class="logo normal email-span"></span><a href="mailto:739970807@qq.com">739970807@qq.com</a> </p>
+    </div>
+    <div id="menu-content">
+        <ul>
+            <li><span class="logo normal home-span"></span><a href="/">首页</a></li>
+            <li><span class="logo normal archive-span"></span><a href="/archives">归档</a></li>
+            <li><span class="logo normal category-span"></span><a href="/categories">分类</a></li>
+            <li><span class="logo normal tags-span"></span><a href="/tags">标签</a></li>
+            <!--li><span class="logo normal about-span"></span><a>关于</a></li-->
+        </ul>
+    </div>
+</div>
+    <div id="footer">
+        <p>@ 2016-2017 </p>
+        <p>Powered by Hexo, Written & Designed by Weng Chunyi</p>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#main').fadeIn(1000);
+    })
+
+</script>
+</html>
